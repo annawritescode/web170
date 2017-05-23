@@ -14,8 +14,14 @@
 	 </div>  <!--close header-inner-->
     </header>
    
+<!--++++++++Beggining nav++++++++-->
 
-<nav>
+        
+        
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' =>  'nav','container_id' => 'nav', ) ); ?>
+        
+        
+      /*  <!--<nav id="nav">
  <ul class="nav">
         <li><a href="index.php">HOME </a></li>
         <li><a href="about.php">ABOUT</a></li> 
@@ -33,21 +39,22 @@
 		<li><a href="#"> Hydrotherapy</a></li>
         
     </ul>
-     </li><!--end of dropdown-->
+     </li>end of dropdown
         
          <li><a href="#">BLOG</a> </li> 
         <li><a href="#">MENU AND PRICING</a> </li>   
         
  </ul>  
- </nav>
+ </nav>-->*/
+<!--+++++++++++ end nav++++++++++-->
 <!--+++++++START MOBILE NAVIGATION++++++-->	
 
-<button class="nav-button">Toggle Navigation</button>
-<div class="mobile-logo"><img src="<?php bloginfo('template_directory');?>/ images/mobile-logo.png" alt="mobile-logo">
+<!--<button class="nav-button">Toggle Navigation</button>
+<div class="mobile-logo"><img src="<?php bloginfo('template_directory');?>/images/mobile-logo.png" alt="mobile-logo">
 
 </div>
 
-		<ul class="primary-nav">
+		 <ul class="primary-nav">
 			<li><a href="index.php">Home</a></li>
 			<li><a href="about.php">About</a></li>
 			<li class="parent"><a href="services.html">Services</a>
@@ -61,7 +68,7 @@
 			
 			<li><a href="specials.html">Special Offers</a></li>
 			<li><a href="contact.html">Contact</a></li>
-		</ul>
+		</ul> -->
 		
 	<!--+++++++END MOBILE NAVIGATION++++++-->	
 
@@ -78,7 +85,17 @@
 	
 
  
-	
+<!--	Begin text-->
+        <div id="content">
+        
+        <?php if(is_404()) ?>        
+        
+        
+        
+        
+        </div><!--     end text-->
+        
+
     
   
 
