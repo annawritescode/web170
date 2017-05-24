@@ -40,7 +40,7 @@ header{
   
 }
 
-nav{
+#menu-main{
  background: #faeaf5;
  height: 50px;/* to get nave to span across top and dropdown to work*/
  clear:both;
@@ -49,13 +49,13 @@ nav{
 
 }
 
-nav ul{
+#menu-main ul{
     width: 85%;
     margin: 0 auto;
     
 }
 
-nav li{
+#menu-main li{
     height: 50px;
     line-height: 50px;
     list-style-type: none;
@@ -65,18 +65,21 @@ nav li{
    
 
 }
-nav li a{
+#menu-main li a{
     
     text-decoration: none;
     display: block;
 	color:black;
 }
 
- nav li a:hover{
+ #menu-main li a:hover{
 	background-color:#4A0000;
 
 	
 } 
+#menu-main ul li ul.sub-menu {
+display: none;
+}
 
 
 .nav-button,
@@ -88,31 +91,32 @@ nav li a{
 
 
 
-/* BEGIN NAV CSS */
+/* BEGIN NAV DROPDOWN CSS */
 
-.nav .button-dropdown {
+#menu-main .button-dropdown {
     position: relative;
 }
 
 
 
-.nav li a span {
+#menu-main li a span {
     display: inline-block;
     margin-left: 5px;
     font-size: 10px;
     color: #999;
 }
 
-.nav li a:hover, .nav li a.dropdown-toggle.active {
+#menu-main li a:hover, .nav li a.dropdown-toggle.active {
     background-color: #4A0000;
     color: #fff;
 }
 
-.nav li a:hover span, .nav li a.dropdown-toggle.active span {
+#menu-main li a:hover span, .nav li a.dropdown-toggle.active span {
     color: #fff;
 }
 
-.nav li .dropdown-menu {
+
+#menu-main li .dropdown-menu {
     display: none;
     position: absolute;
     left: 0;
@@ -123,22 +127,23 @@ nav li a{
     background: #800;
     z-index: 20;
 }
-.nav li .dropdown-menu li{
+#menu-main li .dropdown-menu li{
     float: none;
     text-align: left;
 }
 
 
-.nav li .dropdown-menu.active {
+#menu-main li .dropdown-menu.active {
     display: block;
 }
 
-.nav li .dropdown-menu a {
+#menu-main li .dropdown-menu a {
     width: 150px;
     background: #800;
     padding-left: 20px;
     color: white;
 }
+
 
 /* END NAV CSS */
 
