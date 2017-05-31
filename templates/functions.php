@@ -17,10 +17,28 @@ function get_my_title_tag(){
     bloginfo('description');//retrieve site name
     
 }
-elseif (is_page()|| is_single()){
+/*elseif (is_page()|| is_single()){
     the_title(); //retrieve page or posting title
 }
 else{
     bloginfo('description'); //retrieve site name for everything else
-}
+}*/
+
+//rigister sidebar
+register_sidebar(array(
+    'before_widget'=> 'div id="%1$s" class="widget %2$s">',
+    'after_widget'=>'</div>',
+    'before_title'=>'<h2>',
+    'after_title'=>'</h2>',
+));
+
+//register menus
+register_nav_menus(array('main-menu' => __('Main Menu'),));
+
+//add theme support for post thumbnails and featured images
+add_theme_support('post_thumbnails');
+
+//create page excerpts
+add_post_type_support('page', 'excerpt');
+
 ?>
