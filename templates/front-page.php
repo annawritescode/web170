@@ -37,9 +37,24 @@
         
         
         
-        </div><!--     end text-->
+        </div><!-- end content    end text-->
         
-
+ <!-- Begin Widgets -->
+    <div id="widgets">
+    
+        <section class="widget-item">
+        <h2>Blog Items:</h2>
+        <ul>
+		<?php rewind_posts(); // stop loop one ?>
+        <?php query_posts('showposts=4'); // give directions to loop two ?>
+        <?php while (have_posts()) : the_post(); // start loop two ?>
+        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+        <?php endwhile; // end loop two ?>
+        </ul>
+        </section>
+       
+    </div>
+    <!-- End Widgets -->
     
   
 
