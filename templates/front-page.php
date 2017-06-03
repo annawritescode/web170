@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-
-
+<!--start front page-->
     <div id="wrapper"> 
 	<div class="flexslider">
           <ul class="slides">
@@ -24,14 +23,14 @@
 <!--    end loop one-->
   <?php endwhile; endif; ?>
     
-    <small>page.php</small>
+    
     
     
     <?php rewind_posts(); //stop first loop ?>
-    <?php query_posts('showpposts=2'); // tell loop 2 to show posts ?>
-    <?php while (have-posts()) : the_post(); //start loop 2 ?>
+    <?php query_posts(array('post_type'=> 'page', 'posts_per_page' => -1,'post_status' => 'publish','post_parent'=>185,'order' => 'ASC')); // tell loop 2 to show posts ?>
+    <?php if(have_posts()): while (have-posts()) : the_post(); //start loop 2 ?>
     <?php the_title(); ?>
-    <?php endwhile;  //end loop2 ?>
+    <?php endwhile; endif;  //end loop2 ?>
         <?php if(is_404()) ?>        
         
         
@@ -56,11 +55,9 @@
     </div>
     <!-- End Widgets -->
     
-  
-
 
 </div><!--end wrapper-->
-    <small>index.php</small>
+<small>front-page.php</small>
         
-        
+<!--        end front-->
 <?php get_footer(); ?>

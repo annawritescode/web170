@@ -36,7 +36,7 @@ register_sidebar(array(
 register_nav_menus(array('main-menu' => __('Main Menu'),));
 
 //add theme support for post thumbnails and featured images
-add_theme_support('post_thumbnails');
+add_theme_support('post-thumbnails');
 
 //create page excerpts
 add_post_type_support('page', 'excerpt');

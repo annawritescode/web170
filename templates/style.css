@@ -61,10 +61,11 @@ header{
     list-style-type: none;
     float: left; 
     text-align: center;
-	width:19%; 
+	width:25%; 
    
 
 }
+
 #menu-main li a{
     
     text-decoration: none;
@@ -115,29 +116,32 @@ display: none;
     color: #fff;
 }
 
+#menu-main li {
+    position: relative;
+}
 
-#menu-main li .dropdown-menu {
+#menu-main li ul.sub-menu {
     display: none;
     position: absolute;
     left: 0;
     padding: 0;
     margin: 0;
- 
-    text-align: left;
+    width: 320px;
+    text-align: center;
     background: #800;
-    z-index: 20;
+    z-index: 100;
 }
-#menu-main li .dropdown-menu li{
+#menu-main li ul.sub-menu li{
     float: none;
     text-align: left;
 }
 
 
-#menu-main li .dropdown-menu.active {
+#menu-main li:hover ul.sub-menu {
     display: block;
 }
 
-#menu-main li .dropdown-menu a {
+#menu-main li ul.sub-menu a {
     width: 150px;
     background: #800;
     padding-left: 20px;
@@ -147,7 +151,19 @@ display: none;
 
 /* END NAV CSS */
 
+div.flexslider{
+    width: 50%;
+}
 
+/*Post Images-Thumbanils*/
+img.wp-post-image {}
+#content img.size-thumbnail {
+    float: left;
+    margin: 4px 20px 0 0;
+}
+img.attachment-medium {}
+img.attachment-large {}
+img.attachment-full {}
 
 /*ABOUT PAGE*/
 main{
