@@ -1,9 +1,11 @@
-<!--header.php-->
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
+<title><?php get_my_title_tag(); ?></title>
+<!--begin meta-->
+<meta name="description" contents="<?php echo get_the_excerpt ?>" >
+<!--wnd meta-->
 <!--    flexslider-->
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/flexslider.css" type="text/css" media="screen" />
 
@@ -88,7 +90,7 @@
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' =>  'nav','container_id' => 'nav', ) ); ?>
         
    
-      /*  <!--<nav id="nav">
+ <!--<nav id="nav">
  <ul class="nav">
         <li><a href="index.php">HOME </a></li>
         <li><a href="about.php">ABOUT</a></li> 
@@ -108,33 +110,9 @@
     </ul>
      </li>end of dropdown
         
-         <li><a href="#">BLOG</a> </li> 
+         <li><a href="blog.php">BLOG</a> </li> 
         <li><a href="#">MENU AND PRICING</a> </li>   
         
  </ul>  
- </nav>-->*/
+ </nav>-->
 <!--+++++++++++ end nav++++++++++-->
-<!--+++++++START MOBILE NAVIGATION++++++-->	
-
-<!--<button class="nav-button">Toggle Navigation</button>
-<div class="mobile-logo"><img src="<?php bloginfo('template_directory');?>/images/mobile-logo.png" alt="mobile-logo">
-
-</div>
-
-		 <ul class="primary-nav">
-			<li><a href="index.php">Home</a></li>
-			<li><a href="about.php">About</a></li>
-			<li class="parent"><a href="services.html">Services</a>
-				<ul>
-					<li><a href="#">Facials</a></li>
-					<li><a href="#">Massages</a></li>
-					<li><a href="#">Mani Pedis</a></li>
-					<li><a href="#">Hydrotherapy</a></li>
-				</ul>
-			</li>
-			
-			<li><a href="specials.html">Special Offers</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul> -->
-		
-	<!--+++++++END MOBILE NAVIGATION++++++-->	

@@ -35,10 +35,49 @@ register_sidebar(array(
 //register menus
 register_nav_menus(array('main-menu' => __('Main Menu'),));
 
-//add theme support for post thumbnails and featured images
+//add theme support for post thumbnails and featured images on blog page
 add_theme_support('post-thumbnails');
 
 //create page excerpts
 add_post_type_support('page', 'excerpt');
 
+
+//register sidebar
+register_sidebar(3,array('before_widget'=> '<div id="%1$s" class="widget %2$s">', 'after-widget' => '(div)',));
+
+
+//title tag SEO assignment
+
+function get_title_tag(){
+    
+  
+    
+     global $post;
+    
+    if(is_front_page()|| is_home()){  //front and blog
+    bloginfo('description');
+         }elseif (is_page() || is_single()){ //page or posting
+        
+        echo get_the_title($post->ID);
+        
+        }else{ //404
+        bloginfo('description') ;
+        
+    }
+     if($post->post_parent){
+        echo'|';
+        echo get_the_title($post->$post_parent);
+        
+    }
+    echo'|';
+    echo'Parent or Category';
+    echo'|';
+    bloginfo('name');
+    echo'|';
+    echo'Location';
+  
+  
+    
+    
+}
 ?>
